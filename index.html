@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Frontend Mentor | Todo app</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="card">
+            <div class="card-header">
+                <h1>TODO</h1>
+                <img id="toggle-mood" src="./images/icon-moon.svg" alt="night mood">
+            </div>
+            <div class="card-input">
+                <input type="text" placeholder="Create a new todo...">
+
+            </div>
+            <div class="card-body">
+
+                <div class="task" data-value="true">
+                    <div class="checkbox">
+                        <img src="./images/icon-check.svg" alt="Check Icon" class="check-img">
+                    </div>
+                    <p class="task-title">Complete online JavaScript course</p>
+                    <div style=" display: flex; justify-content: center; align-items: center;">
+                        <img src="./images/icon-cross.svg" alt="Close Icon" class="task-option">
+                    </div>
+                </div>
+                <div class="task">something something</div>
+                <div class="task">something something</div>
+                <div class="task">something something</div>
+                <div class="task">something something</div>
+                <div class="card-footer">
+                    <span>5 items lfet</span>
+                    <div class="footer-center">
+                        <button>ALl</button>
+                        <button>Active</button>
+                        <button>Completed</button>
+                    </div>
+                    <button>Clear Completed</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- <img class="background-image" src="./images/bg-desktop-light.jpg" /> Todo -->
+
+    <!-- Add dynamic number -->
+    <!-- items left All Active Completed Clear Completed Drag and drop to reorder list -->
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
