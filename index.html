@@ -19,28 +19,68 @@
                 <img id="toggle-mood" src="./images/icon-moon.svg" alt="night mood">
             </div>
             <div class="card-input">
-                <input type="text" placeholder="Create a new todo...">
-
+                <input type="text" id="todo-input" placeholder="Create a new todo...">
             </div>
-            <div class="card-body">
+            <div class="card-body" id="card-body">
 
                 <div class="task" data-value="true">
-                    <div class="checkbox">
+                    <div class="checkbox" onclick="checkItem(this)">
                         <img src="./images/icon-check.svg" alt="Check Icon" class="check-img">
                     </div>
                     <p class="task-title">Complete online JavaScript course</p>
                     <div style=" display: flex; justify-content: center; align-items: center;">
+                        <img src="./images/icon-cross.svg" alt="Close Icon" class="task-option" onclick="deleteItem(this)">
+                    </div>
+                </div>
+                <div class="task" data-value="true">
+                    <div class="checkbox">
+                        <img src="./images/icon-check.svg" alt="Check Icon" class="check-img">
+                    </div>
+                    <p class="task-title">Jog around the park 3x</p>
+                    <div style=" display: flex; justify-content: center; align-items: center;">
                         <img src="./images/icon-cross.svg" alt="Close Icon" class="task-option">
                     </div>
                 </div>
-                <div class="task">something something</div>
-                <div class="task">something something</div>
-                <div class="task">something something</div>
-                <div class="task">something something</div>
+                <div class="task" data-value="true">
+                    <div class="checkbox">
+                        <img src="./images/icon-check.svg" alt="Check Icon" class="check-img">
+                    </div>
+                    <p class="task-title">10 minutes meditation</p>
+                    <div style=" display: flex; justify-content: center; align-items: center;">
+                        <img src="./images/icon-cross.svg" alt="Close Icon" class="task-option">
+                    </div>
+                </div>
+                <div class="task" data-value="true">
+                    <div class="checkbox">
+                        <img src="./images/icon-check.svg" alt="Check Icon" class="check-img">
+                    </div>
+                    <p class="task-title">Read for 1 hour</p>
+                    <div style=" display: flex; justify-content: center; align-items: center;">
+                        <img src="./images/icon-cross.svg" alt="Close Icon" class="task-option">
+                    </div>
+                </div>
+                <div class="task" data-value="true">
+                    <div class="checkbox">
+                        <img src="./images/icon-check.svg" alt="Check Icon" class="check-img">
+                    </div>
+                    <p class="task-title">Pick up groceries</p>
+                    <div style=" display: flex; justify-content: center; align-items: center;">
+                        <img src="./images/icon-cross.svg" alt="Close Icon" class="task-option">
+                    </div>
+                </div>
+                <div class="task" data-value="true">
+                    <div class="checkbox">
+                        <img src="./images/icon-check.svg" alt="Check Icon" class="check-img">
+                    </div>
+                    <p class="task-title">Complete Todo App on Fronted Mentor</p>
+                    <div style=" display: flex; justify-content: center; align-items: center;">
+                        <img src="./images/icon-cross.svg" alt="Close Icon" class="task-option">
+                    </div>
+                </div>
                 <div class="card-footer">
                     <span>5 items lfet</span>
                     <div class="footer-center">
-                        <button>ALl</button>
+                        <button>All</button>
                         <button>Active</button>
                         <button>Completed</button>
                     </div>
