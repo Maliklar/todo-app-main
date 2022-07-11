@@ -10,7 +10,7 @@
     <title>Frontend Mentor | Todo app</title>
 </head>
 
-<body>
+<body class="dark">
 
     <main>
         <div class="card">
@@ -19,7 +19,7 @@
                 <img id="toggle-mood" src="./images/icon-moon.svg" alt="night mood">
             </div>
 
-            <div class="card-input" data-value="false">
+            <div class="card-input" id="card-input" data-value="false">
 
                 <div class="checkbox" onclick="checkItem(this)">
                     <img src="./images/icon-check.svg" alt="Check Icon" class="check-img">
@@ -28,23 +28,15 @@
             </div>
 
             <div class="card-body" id="card-body">
-                <div class="task" data-value="true">
-                    <div class="checkbox" onclick="checkItem(this)">
-                        <img src="./images/icon-check.svg" alt="Check Icon" class="check-img">
-                    </div>
-                    <p class="task-title">Complete online JavaScript course</p>
-                    <div style=" display: flex; justify-content: center; align-items: center;">
-                        <img src="./images/icon-cross.svg" alt="Close Icon" class="task-option" onclick="deleteItem(this)">
-                    </div>
-                </div>
+
 
             </div>
-            <div class="card-footer">
+            <div class="card-footer" id="card-footer">
                 <span><span id="number-of-items"></span> items lfet</span>
-                <div class="footer-center">
-                    <button onclick="getAll()">All</button>
-                    <button onclick="getActive()">Active</button>
-                    <button onclick="getCompleted()">Completed</button>
+                <div class="footer-center" id="filter-buttons">
+                    <button class="active" onclick="getAll(this)">All</button>
+                    <button onclick="getActive(this)">Active</button>
+                    <button onclick="getCompleted(this)">Completed</button>
                 </div>
                 <button onclick="clearCompleted()">Clear Completed</button>
             </div>

@@ -3,6 +3,7 @@ const moodToggle = document.getElementById("toggle-mood");
 const body = document.body;
 const todoInput = document.getElementById('todo-input');
 const cardBody = document.getElementById('card-body');
+const filterButtons = document.getElementById('filter-buttons');
 const itemsNumber = document.getElementById('number-of-items');
 let mood = true;
 
@@ -11,14 +12,11 @@ let mood = true;
 moodToggle.addEventListener("click", () => {
     if (mood) {
         mood = false;
-        moodToggle.setAttribute("src", "./images/icon-sun.svg");
-        body.style.backgroundColor = "var(--VeryDarkBlue)";
-        body.style.backgroundImage = "url('/images/bg-desktop-dark.jpg')";
+        body.setAttribute("class", "light");
+
     } else {
         mood = true;
-        moodToggle.setAttribute("src", "./images/icon-moon.svg");
-        body.style.backgroundColor = "var(--VeryLightGray)";
-        body.style.backgroundImage = "url('/images/bg-desktop-light.jpg')";
+        body.setAttribute("class", "dark");
     }
 });
 
@@ -109,7 +107,7 @@ function updateItemsNumber() {
     itemsNumber.innerText = todos.length;
 }
 
-function getActive() {
+function getActive(ele) {
     todos.filter((val) => {
         if (val.state == true) {
             document.getElementById(val.id).style.display = "none";
@@ -117,15 +115,31 @@ function getActive() {
             document.getElementById(val.id).style.display = "grid";
         }
     })
+
+    ele.setAttribute("class", "active");
+    for (let i = 0; i < filterButtons.children.length; i++) {
+        console.log()
+        if (filterButtons.children[i] != ele) {
+            filterButtons.children[i].setAttribute("class", "");
+        }
+    }
 }
 
-function getAll() {
+function getAll(ele) {
+
     todos.filter((val) => {
         document.getElementById(val.id).style.display = "grid";
     });
+
+    ele.setAttribute("class", "active");
+    for (let i = 0; i < filterButtons.children.length; i++) {
+        if (filterButtons.children[i] != ele) {
+            filterButtons.children[i].setAttribute("class", "");
+        }
+    }
 }
 
-function getCompleted() {
+function getCompleted(ele) {
     todos.filter((val) => {
         if (val.state == false) {
             document.getElementById(val.id).style.display = "none";
@@ -133,6 +147,15 @@ function getCompleted() {
             document.getElementById(val.id).style.display = "grid";
         }
     })
+
+    ele.setAttribute("class", "active");
+    for (let i = 0; i < filterButtons.children.length; i++) {
+        console.log()
+        if (filterButtons.children[i] != ele) {
+            filterButtons.children[i].setAttribute("class", "");
+        }
+    }
+
 }
 
 

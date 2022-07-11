@@ -1,201 +1,267 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
-:root {
-    /* Light Theme */
-    --VeryLightGray: hsl(0, 0%, 98%);
-    --VeryLightGrayishBlue: hsl(236, 33%, 92%);
-    --LightGrayishBlue: hsl(233, 11%, 84%);
-    --DarkGrayishBlue: hsl(236, 9%, 61%);
-    --VeryDarkGrayishBlue: hsl(235, 19%, 35%);
-    /* Dark Theme */
-    --VeryDarkBlue: hsl(235, 21%, 11%);
-    --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
-    --LightGrayishBlue: hsl(234, 39%, 85%);
-    --LightGrayishBlue: hsl(236, 33%, 92%);
-    /* (hover) */
-    --DarkGrayishBlue: hsl(234, 11%, 52%);
-    --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
-    --VeryDarkGrayishBlue: hsl(237, 14%, 26%);
-    --BrightBlue: hsl(220, 98%, 61%);
-    --CheckBackground: linear-gradient(217deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-}
-
-* {
-    font-family: 'Josefin Sans', 'Courier New', Courier, monospace;
-}
-
-html {
-    font-size: 18px;
-    font-family: 'Josefin Sans', 'Courier New', Courier, monospace;
-}
-
-p {
-    margin: 0px;
-}
-
-.card-input {
-    display: grid;
-    grid-template-columns: 1fr 10fr;
-    align-items: center;
-    gap: 3px;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding: 0px 26px;
-    border: none;
-    margin-bottom: 24px;
-    background-color: white;
-}
-
-.card-input[data-value=true]>.checkbox {
-    border: none;
-    visibility: visible;
-    background: var(--CheckBackground);
-    background-color: transparent;
-}
-
-.card-input[data-value=true]>.checkbox>.check-img {
-    visibility: visible;
-}
-
-input[type=text] {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 23px 0px;
-    font-size: 1rem;
-    border: none;
-}
-
-input[type=text]::placeholder {
-    color: var(--DarkGrayishBlue);
-}
-
-.checkbox {
-    border-radius: 100%;
-    border: 1px var(--LightGrayishBlue) solid;
-    height: 1.3rem;
-    width: 1.3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.checkbox:hover {
-    border: 1px var(--DarkGrayishBlue) solid;
-}
-
-.task[data-value=true] {
-    text-decoration: line-through;
-    color: var(--VeryLightGrayishBlue);
-}
-
-.task-option {
-    visibility: hidden;
-}
-
-.task:hover .task-option {
-    visibility: visible;
-}
-
-.task[data-value=true]>.checkbox {
-    border: none;
-    visibility: visible;
-    background: var(--CheckBackground);
-    background-color: transparent;
-}
-
-.task[data-value=true]>.checkbox>.check-img {
-    visibility: visible;
-}
-
-.check-img {
-    object-fit: cover;
-    visibility: hidden;
-}
-
-.task {
-    width: 100%;
-    box-sizing: content-box;
-    display: grid;
-    gap: 12px;
-    font-weight: 300;
-    grid-template-columns: 1fr 10fr 3fr;
-    align-items: center;
-    padding: 20px 24px;
-    border: none;
-    border-bottom: solid var(--VeryLightGrayishBlue) 1px;
-    background-color: white;
-    color: var(--CheckBackground);
-    cursor: pointer;
-}
-
-#night-mood {
-    display: none;
-}
-
-img {
-    cursor: pointer;
-}
-
-body {
-    background: url(./images/bg-desktop-light.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-    min-height: 100vh;
-    margin: 0px;
-    padding: 0px;
-    transition: all 0.5s;
-}
-
-.card {
-    margin: 0px 31.3%;
-    border-radius: 15px;
-}
-
-.card-header {
-    color: var(--VeryLightGray);
-    letter-spacing: 0.8em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 700;
-    font-size: 1.1em;
-    margin-bottom: 14px;
-}
-
-button {
-    background-color: transparent;
-    border: none;
-    color: var(--);
-    font-weight: 700;
-}
-
-.card-body {
-    background-color: white;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0px 50px 80px 0px var(--VeryLightGrayishBlue);
-}
-
-.card-footer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 16px;
-    font-size: 0.8rem;
-    border: none;
-    background-color: white;
-}
-
-.footer-center {}
-
-main {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3.83%;
-    width: 90wv;
-    min-height: 100vh;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+     :root {
+        /* Light Theme */
+        --LIGHTVeryLightGray: hsl(0, 0%, 98%);
+        --LIGHTVeryLightGrayishBlue: hsl(236, 33%, 92%);
+        --LIGHTLightGrayishBlue: hsl(233, 11%, 84%);
+        --LIGHTDarkGrayishBlue: hsl(236, 9%, 61%);
+        --LIGHTVeryDarkGrayishBlue: hsl(235, 19%, 35%);
+        /* Dark Theme */
+        --DARKVeryDarkBlue: hsl(235, 21%, 11%);
+        --DARKVeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+        --DARKLightGrayishBlue1: hsl(234, 39%, 85%);
+        --DARKLightGrayishBlue2: hsl(236, 33%, 92%);
+        /* (hover) */
+        --HOVERDarkGrayishBlue: hsl(234, 11%, 52%);
+        --HOVERVeryDarkGrayishBlue: hsl(233, 14%, 35%);
+        --HOVERVeryDarkGrayishBlue: hsl(237, 14%, 26%);
+        --HOVERBrightBlue: hsl(220, 98%, 61%);
+        --HOVERCheckBackground: linear-gradient(217deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    }
+    
+    * {
+        font-family: 'Josefin Sans', 'Courier New', Courier, monospace;
+    }
+    
+    html {
+        font-size: 18px;
+        font-family: 'Josefin Sans', 'Courier New', Courier, monospace;
+    }
+    
+    p {
+        margin: 0px;
+    }
+    
+    .card-input {
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+        align-items: center;
+        gap: 3px;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 0px 24px;
+        border: none;
+        margin-bottom: 24px;
+    }
+    
+    .card-input[data-value=true]>.checkbox {
+        border: none;
+        visibility: visible;
+        background: var(--HOVERCheckBackground);
+        background-color: transparent;
+    }
+    
+    .card-input[data-value=true]>.checkbox>.check-img {
+        visibility: visible;
+    }
+    
+    input[type=text] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 23px 0px;
+        font-size: 1rem;
+        background-color: transparent;
+        border: none;
+    }
+    
+    input[type=text]::placeholder {
+        color: var(--LIGHTDarkGrayishBlue);
+    }
+    
+    .checkbox {
+        border-radius: 100%;
+        border: 1px var(--LIGHTDarkGrayishBlue) solid;
+        height: 1.3rem;
+        width: 1.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    
+    .checkbox:hover {
+        border: 1px var(--LIGHTDarkGrayishBlue) solid;
+    }
+    
+    .task[data-value=true] {
+        text-decoration: line-through;
+        color: var(--LIGHTVeryLightGrayishBlue);
+    }
+    
+    .task-option {
+        visibility: hidden;
+    }
+    
+    .task:hover .task-option {
+        visibility: visible;
+    }
+    
+    .task[data-value=true]>.checkbox {
+        border: none;
+        visibility: visible;
+        background: var(--HOVERCheckBackground);
+        background-color: transparent;
+    }
+    
+    .task[data-value=true]>.checkbox>.check-img {
+        visibility: visible;
+    }
+    
+    .check-img {
+        object-fit: cover;
+        visibility: hidden;
+    }
+    
+    .task {
+        width: 100%;
+        box-sizing: content-box;
+        display: grid;
+        gap: 12px;
+        font-weight: 300;
+        grid-template-columns: 1fr 10fr 3fr;
+        align-items: center;
+        padding: 20px 22px;
+        border: none;
+        border-bottom: solid var(--LIGHTVeryLightGrayishBlue) 1px;
+        background-color: white;
+        color: var(--LIGHTVeryDarkGrayishBlue);
+        cursor: pointer;
+    }
+    
+    #night-mood {
+        display: none;
+    }
+    
+    img {
+        cursor: pointer;
+    }
+    
+    body {
+        background: url(./images/bg-desktop-light.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: contain;
+        min-height: 100vh;
+        margin: 0px;
+        padding: 0px;
+        transition: all 0.5s;
+    }
+    
+    .card {
+        margin: 0px 31.3%;
+        border-radius: 10px;
+    }
+    
+    .card-header {
+        color: var(--LIGHTVeryLightGray);
+        letter-spacing: 0.8em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
+        font-size: 1.1em;
+        margin-bottom: 14px;
+    }
+    
+    .card-body {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 16px;
+        font-size: 0.8rem;
+        border: none;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3.51%;
+        width: 90wv;
+        min-height: 100vh;
+    }
+    
+    .active {
+        color: var(--HOVERBrightBlue);
+    }
+    
+    button {
+        cursor: pointer;
+        color: var(--LIGHTDarkGrayishBlue);
+        background-color: transparent;
+        border: none;
+        font-weight: 700;
+    }
+    
+    button:hover {
+        color: var(--LIGHTVeryDarkGrayishBlue);
+    }
+    /* Themes */
+    
+    body.dark {
+        background-color: var(--DARKVeryDarkBlue);
+        background-image: url(./images/bg-desktop-dark.jpg);
+    }
+    
+    body.light {
+        background-color: var(--LIGHTVeryLightGray);
+        background-image: url(./images/bg-desktop-light.jpg);
+    }
+    
+    .dark .task {
+        background-color: var(--DARKVeryDarkDesaturatedBlue);
+        color: var(--DARKLightGrayishBlue1);
+        border-bottom: 1px solid var(--LIGHTVeryDarkGrayishBlue);
+    }
+    
+    .dark .card-input {
+        background-color: var(--DARKVeryDarkDesaturatedBlue);
+    }
+    
+    .dark .card-footer {
+        background-color: var(--DARKVeryDarkDesaturatedBlue);
+        color: var(--HOVERDarkGrayishBlue);
+    }
+    
+    body.dark .card-body {
+        box-shadow: 0px 30px 50px 0px black;
+    }
+    
+    body.dark .task[data-value=true] {
+        color: var(--HOVERDarkGrayishBlue);
+    }
+    /* Light */
+    
+    body.light .card-body {
+        background-color: white;
+        box-shadow: 0px 30px 50px 0px var(--LIGHTDarkGrayishBlue);
+    }
+    
+    .light .card-input {
+        background-color: white;
+    }
+    
+    body.light .task {
+        background-color: white;
+        color: var(--LIGHTVeryDarkGrayishBlue);
+        border-bottom: 1px solid var(--LIGHTLightGrayishBlue);
+    }
+    
+    body.light .task[data-value=true] {
+        color: var(--LIGHTLightGrayishBlue);
+    }
+    
+    body.light .card-footer {
+        background-color: white;
+        color: var(--HOVERDarkGrayishBlue);
+    }
